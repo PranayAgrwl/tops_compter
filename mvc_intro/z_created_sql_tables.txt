@@ -1,0 +1,9 @@
+MYSQL
+
+1. categories table
+
+CREATE TABLE category (
+    cid INT AUTO_INCREMENT PRIMARY KEY,      -- Unique ID for each category (automatically increments)
+    cname VARCHAR(255) NOT NULL,             -- Name of the category (required)
+    cimage VARCHAR(500)                      -- Location of the image (e.g., file path or URL)
+);

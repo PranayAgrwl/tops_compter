@@ -14,6 +14,10 @@ created view folder
 created a simple test home page
 3.2 about.php
 created a simple test about us page
+3.3 navbar.php
+created a simple navbar using bootstrap
+3.2 categoryadd.php
+created a form, to add categoryies in my sample e-commerce website
 
 4. index.php
 created a main index file
@@ -23,3 +27,6 @@ created a readme file to record all created files
 
 6. .htaccess
 asked AI to create a basic .htaccess file - with php; and index.php something
+
+7. uploads
+created uploads folder

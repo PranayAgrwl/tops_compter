@@ -12,11 +12,19 @@ $uri_array = explode ('/', $uri_str);
 $path = $uri_array[3];
 // echo $path;
 
+
+$GLOBALS['baseurl'] = "https://localhost/tops_computer/mvc_intro/";
+
+
 if(isset($path) && $path == ""){
     $objController -> home();
 }
 else if($path == "about"){
     $objController -> about();
+}
+
+else if($path == "categoryadd"){
+    $objController -> categoryadd();
 }
 else if($path == "product"){
     echo 'PRODUCT';
