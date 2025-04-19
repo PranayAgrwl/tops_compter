@@ -46,5 +46,62 @@ class controller extends model{
         }
     }
 
+    public function category(){
+        $catdata = $this -> selectData("category");
+        include('view/category.php');
+    }
+
+    public function categorydelete($id){
+        if(isset($id)){
+            $catdata = $this -> findOne("category",['cid'=>$id]);
+            echo $image = "uploads/".$catdata->cimage;
+            unlink($image);
+            $result = $this -> deleteData ("category", ['cid'=>$id]);
+            if(isset($result)){
+                header("Location:".$GLOBALS['baseurl']."category");
+            }
+        }
+    }
+
+    public function categoryedit($id){
+        $catdata = $this -> findOne("category",['cid'=>$id]);
+        include('view/categoryedit.php');
+
+        if(isset($_REQUEST['submit'])){
+            $cname = $_REQUEST['cname'];
+            if(isset($_FILES['cimage']['name']) && $_FILES['cimage']['name']!="") {
+                $name = $_FILES['cimage']['name'];
+                $temp = $_FILES['cimage']['tmp_name'];
+                $extname = $_FILES['cimage']['type'];
+                $extarray = explode ("/", $extname);
+                $ext = $extarray[1];
+                if($ext == "jpeg" || $ext == "jpg" || $ext == "png"){
+                    $filename = time(). "." .$ext;
+                    move_uploaded_file($temp,"uploads/".$filename);
+                    echo $image = "uploads/".$catdata->cimage;
+                    unlink($image);
+                }
+                else{
+                    echo "ERROR - UNRECOGNISED FILE FORMAT <br> PLEASE USE JPG, JPEG OR PNG";
+                }
+            }
+
+            else{
+                $filename = $catdata -> cimage ;
+            }
+
+            $productData = ["cname" => $cname, "cimage" => $filename];
+            $result = $this -> updateData ("category", $productData, ['cid'=>$id]);
+            if(isset($result)){
+                header("Location: ". $GLOBALS['baseurl']."category");
+            }
+        }
+
+    }
+
+
+
+
+
 }
 ?>

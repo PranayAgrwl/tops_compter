@@ -12,6 +12,7 @@ $uri_array = explode ('/', $uri_str);
 $path = $uri_array[3];
 // echo $path;
 
+$queryparams = isset($uri_array[4]) ? $uri_array[4] : 0;
 
 $GLOBALS['baseurl'] = "https://localhost/tops_computer/mvc_intro/";
 
@@ -26,12 +27,21 @@ else if($path == "about"){
 else if($path == "categoryadd"){
     $objController -> categoryadd();
 }
+else if($path == "category"){
+    $objController -> category();
+}
+else if($path == "categorydelete"){
+    $objController -> categorydelete($queryparams);
+}
+else if($path == "categoryedit"){
+    $objController -> categoryedit($queryparams);
+}
 else if($path == "product"){
     echo 'PRODUCT';
 }
 
 else{
-    echo 'ERROR 404 PAGE NOT FOUND';
+    include ('view/error404.php');
 }
 
 

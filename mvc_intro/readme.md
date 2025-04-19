@@ -16,8 +16,16 @@ created a simple test home page
 created a simple test about us page
 3.3 navbar.php
 created a simple navbar using bootstrap
-3.2 categoryadd.php
+3.4 footer.php
+simple page to end html tag, can include more later on
+3.5 error404.php
+created an error page for URL not found
+3.6 categoryadd.php
 created a form, to add categoryies in my sample e-commerce website
+3.7 category.php
+created a view table for category
+3.8 categoryedit.php
+page to edit category, first view previous data, then edit data, then save data
 
 4. index.php
 created a main index file

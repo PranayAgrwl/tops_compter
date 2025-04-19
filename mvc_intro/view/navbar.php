@@ -13,28 +13,16 @@
     <div class="container-fluid">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="/pranay_mysql/project_journal/#">Home</a>
+                <a class="nav-link" href="<?php echo $GLOBALS['baseurl'] ?>">Home</a>
             </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="/pranay_mysql/project_journal/journal_entry.php">Create Entry</a>
-            </li> -->
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="/pranay_mysql/project_journal/journal_entry_view.php">View Entry</a>
-            </li> -->
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="/pranay_mysql/project_journal/journal_labels.php">Labels List</a>
-            </li> -->
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="/pranay_mysql/project_journal/people_master.php">People Master</a>
-            </li> -->
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="/pranay_mysql/project_journal/people_group.php">People Groups</a>
-            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo $GLOBALS['baseurl'].'about' ?>">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo $GLOBALS['baseurl'].'category' ?>">Category</a>
+            </li>
         </ul>
     </div>
     </nav>
 
     <br>
-    
-</body>
-</html>
