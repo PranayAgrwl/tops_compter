@@ -76,6 +76,21 @@ class model{
         return $res;
     }
 
+    public function selectDataJoin($table, $join)
+    {
+        $query = "SELECT * FROM $table"; // join category on
+        foreach ($join as $key=>$value)
+        {
+            $query.=" JOIN ".$key." ON ".$value;
+        }
+        $res = $this -> connection -> query ($query);
+        while ($row = $res -> fetch_object())
+        {
+            $rw[] = $row;
+        }
+        return $rw ?? [];
+    }
+
 
 }
 ?>

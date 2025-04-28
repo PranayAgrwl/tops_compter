@@ -1,8 +1,11 @@
 <?php
 include ("model/model.php");
+
 include ("controller/controller.php");
+include ("controller/productController.php");
 
 $objController = new Controller();
+$objProduct = new ProductController();
 
 $uri_str = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 // echo $uri_str;
@@ -37,7 +40,16 @@ else if($path == "categoryedit"){
     $objController -> categoryedit($queryparams);
 }
 else if($path == "product"){
-    echo 'PRODUCT';
+    $objProduct -> product($queryparams);
+}
+else if($path == "productadd"){
+    $objProduct -> productadd($queryparams);
+}
+else if($path == "productedit"){
+    $objProduct -> productedit($queryparams);
+}
+else if($path == "productdelete"){
+    $objProduct -> productdelete($queryparams);
 }
 
 else{

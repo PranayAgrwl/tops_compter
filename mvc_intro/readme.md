@@ -2,10 +2,12 @@
 created controller folder
 1.1 controller.php
 created a controller file
+1.2 productController.php
+created a controller just for products page
 
 2. model
 created model folder
-2.2 model.php
+2.1 model.php
 created a model file
 
 3. view
@@ -20,12 +22,22 @@ created a simple navbar using bootstrap
 simple page to end html tag, can include more later on
 3.5 error404.php
 created an error page for URL not found
-3.6 categoryadd.php
+
+3.2 category pages
+3.2.1 categoryadd.php
 created a form, to add categoryies in my sample e-commerce website
-3.7 category.php
+3.2.2 category.php
 created a view table for category
-3.8 categoryedit.php
+3.2.3 categoryedit.php
 page to edit category, first view previous data, then edit data, then save data
+
+3.3 products pages
+3.3.1 product.php
+page to view product
+3.3.2 productadd.php
+page to add product
+3.3.3 productedit.php
+created page to edit product
 
 4. index.php
 created a main index file

@@ -21,6 +21,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo $GLOBALS['baseurl'].'category' ?>">Category</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo $GLOBALS['baseurl'].'product' ?>">Product</a>
+            </li>
         </ul>
     </div>
     </nav>
