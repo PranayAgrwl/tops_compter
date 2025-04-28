@@ -4,6 +4,8 @@ created controller folder
 created a controller file
 1.2 productController.php
 created a controller just for products page
+1.3 userController.php
+created a controller for users
 
 2. model
 created model folder
@@ -38,6 +40,18 @@ page to view product
 page to add product
 3.3.3 productedit.php
 created page to edit product
+
+3.4 user dashboard panel, created new folder for the same
+3.4.1 index.php
+page that is user index page, home or dashboard
+3.4.2 userabout.php
+sample test user about page
+3.4.3 usernav.php
+user navbar
+3.4.3 userfooter.php
+user footer
+3.4.5 userlogin
+user login page
 
 4. index.php
 created a main index file

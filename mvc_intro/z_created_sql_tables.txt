@@ -17,3 +17,10 @@ CREATE TABLE products (
     pimage VARCHAR(255)                        -- Image path or URL
 );
 
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,              -- Unique user ID
+    username VARCHAR(100) NOT NULL,                 -- Username
+    email VARCHAR(150) NOT NULL UNIQUE,             -- User email (must be unique)
+    password VARCHAR(255) NOT NULL,                 -- Hashed password
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP  -- Signup timestamp
+);

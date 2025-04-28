@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-sm bg-light">
+<nav class="navbar navbar-expand-sm bg-light">
     <div class="container-fluid">
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -25,7 +25,10 @@
                 <a class="nav-link" href="<?php echo $GLOBALS['baseurl'].'product' ?>">Product</a>
             </li>
         </ul>
+        <div class="d-flex">
+            <a class="nav-link" href="<?php echo $GLOBALS['baseurl'].'user/' ?>">User Login</a>
+        </div>
     </div>
-    </nav>
+</nav>
 
-    <br>
+<br>
