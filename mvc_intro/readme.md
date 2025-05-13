@@ -52,6 +52,8 @@ user navbar
 user footer
 3.4.5 userlogin
 user login page
+3.4.6 script.js
+javascript page to get data without page refresh (ajax)
 
 4. index.php
 created a main index file

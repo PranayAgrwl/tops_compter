@@ -62,7 +62,6 @@ else if($path == "productdelete"){
     $objProduct -> productdelete($queryparams);
 }
 
-
 else if($userpath == ""){
     $objUser -> user();
 }
@@ -78,9 +77,13 @@ else if($userpath == "userlogin"){
 else if($userpath == "userlogout"){
     $objUser -> userlogout();
 }
+else if($userpath == "allproduct"){
+    $objUser -> allproducts();
+}
 
 else{
     include ('view/error404.php');
+    echo $GLOBALS['baseurl'];
     echo $path;
 }
 

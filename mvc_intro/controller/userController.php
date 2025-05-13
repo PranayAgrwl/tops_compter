@@ -62,6 +62,15 @@ class UserController extends Model
         }
     }
 
+    public function allproducts()
+    {
+        $products = $this -> selectData("products");
+        if(isset($products))
+        {
+            echo json_encode ($products);
+        }
+    }
+
     
 }
 ?>
